@@ -1,12 +1,12 @@
 
 import './App.css';
-import {Carousel,Button,Nav,Navbar,Container,Alert } from 'react-bootstrap';
+import {Carousel,Button,Nav,Navbar,Container,Alert,Form } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div>
-      <Alert key='danger' variant='danger'>
+      <Alert key='danger' variant='danger'>n
           This is an alert—check it out!
         </Alert>
       <Navbar bg="dark" variant="dark">
@@ -19,6 +19,26 @@ function App() {
           </Nav>
         </Container>
       </Navbar>
+      <Form>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Text className="text-muted">
+          We'll never share your email with anyone else.
+        </Form.Text>
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="Password" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicCheckbox">
+        <Form.Check type="checkbox" label="Check me out" />
+      </Form.Group>
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
       <Carousel>
       <Carousel.Item interval={1000}>
         <img
